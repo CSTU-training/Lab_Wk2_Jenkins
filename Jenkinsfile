@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/CSTU-training/Lab_Wk2_Jenkins.git',
-                    branch: 'main'
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         git url: 'https://github.com/CSTU-training/Lab_Wk2_Jenkins.git',
+        //             branch: 'main'
+        //     }
+        // }
 
         stage('Lint') {
             steps {

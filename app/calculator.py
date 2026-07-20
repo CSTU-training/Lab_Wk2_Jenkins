@@ -6,3 +6,8 @@ def add(first_number: float, second_number: float) -> float:
 def divide(dividend: float, divisor: float) -> float:
     """Return dividend divided by divisor."""
     return dividend / divisor
+
+
+def subtract(first_number: float, second_number: float) -> float:
+    """Return the difference of two numbers."""
+    return first_number - second_number

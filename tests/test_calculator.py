@@ -1,4 +1,4 @@
-from app.calculator import add, divide
+from app.calculator import add, divide, subtract
 
 
 def test_add_positive_numbers():
@@ -11,3 +11,7 @@ def test_add_negative_numbers():
 
 def test_divide_numbers():
     assert divide(10, 2) == 5
+
+
+def test_subtract_numbers():
+    assert subtract(5, 3) == 2
