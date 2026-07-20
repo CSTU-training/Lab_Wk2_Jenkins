@@ -12,7 +12,7 @@ pipeline {
         stage('Lint') {
             steps {
                 sh '''
-                    python3 -m pip install --user flake8
+                    python3 -m pip install --user --break-system-packages flake8
                     python3 -m flake8 app tests scripts --max-line-length=120
                 '''
             }
@@ -21,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    python3 -m pip install --user pytest
+                    python3 -m pip install --user --break-system-packages pytest
                     python3 -m pytest tests/ -v
                 '''
             }
@@ -36,7 +36,7 @@ pipeline {
                     )
                 ]) {
                     sh '''
-                        python3 -m pip install --user anthropic
+                        python3 -m pip install --user --break-system-packages anthropic
                         python3 scripts/ai_review.py
                     '''
                 }
